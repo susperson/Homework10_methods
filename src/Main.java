@@ -51,13 +51,7 @@ public class Main {
     }
 
     public static boolean checkIfYearIsLeap(int year) {
-        int every4 = year % 4;
-        int every100 = year % 100;
-        int every400 = year % 400;
-        boolean yearIsLeap;
-
-        yearIsLeap = (every400 == 0) || ((every100 != 0) && (every4 == 0));
-        return yearIsLeap;
+        return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
     }
 
     public static void printIsYearALeap(int year, boolean leapYear) {
